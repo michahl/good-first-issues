@@ -5,9 +5,10 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'logo' : ['Sacramento']
+    },
     extend: {},
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [],
 }
