@@ -5,8 +5,8 @@ import Issues from "./components/Issues"
 
 const App = () => {
   return (
-    <div className="mx-5" >
-      <div className="flex flex-col justify-center items-center min-h-screen">
+    <div className="bg-zinc-100 dark:bg-gray-950">
+      <div className="mx-5 flex flex-col justify-center items-center min-h-screen">
         <div className="w-full max-w-3xl">
           <Header />
           <Filter />

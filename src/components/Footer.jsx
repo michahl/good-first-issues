@@ -1,16 +1,17 @@
 import React from 'react'
+import Logo from './Logo'
 
 const Footer = () => {
   return (
     <div className='relative mb-5'>
       <div className='bottom-0 flex flex-row items-center justify-between'>
           <div className='flex flex-col items-start'>
-              <h1 className="text-2xl font-logo font-extrabold select-none">BugScout</h1>
+              <Logo size={'text-xl'}/>
               <p className='text-xs text-zinc-500'>Designed to help developers discover good first issues.</p>
           </div>
           <a href='https://github.com/michahl/bugscout' target='_blank' className='opacity-85'>
             <svg
-              className="rounded-full bg-white w-7 h-7"
+              className="rounded-full  w-7 h-7"
               viewBox="0 -3.5 256 256"
               xmlns="http://www.w3.org/2000/svg"
               preserveAspectRatio="xMinYMin meet"

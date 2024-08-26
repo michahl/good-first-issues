@@ -1,10 +1,13 @@
-
+import Logo from "./Logo"
+import Theme from "./Theme"
 
 const Header = () => {
   return (
     <div className="my-3 flex items-center justify-center relative">
-        <h1 className="text-4xl font-logo font-extrabold select-none">BugScout</h1>
-
+        <Logo size={'text-3xl'} />
+        <div className="absolute right-1 cursor-pointer">
+          <Theme />
+        </div>
         {/*<div className="absolute right-1 cursor-pointer">
           <svg
             className="rounded-full bg-white w-7 h-7"
