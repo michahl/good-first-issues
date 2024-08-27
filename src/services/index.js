@@ -129,24 +129,3 @@ const fetchGitHubIssues = async (params) => {
 
 export default fetchGitHubIssues
 
-/*
-Example
-(async () => {
-  const params = {
-    minStars: 0,
-    maxStars: 1000000,
-    language: "JavaScript",
-    isAssigned: false,
-    cursor: null,
-    hasPullRequests: false,
-  };
-
-  try {
-    const data = await fetchGitHubIssues(params);
-    console.log("Fetched issues:", data);
-  } catch (error) {
-    console.error("Error:", error.message);
-  }
-})();
-
-*/

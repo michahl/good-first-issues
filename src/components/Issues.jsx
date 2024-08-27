@@ -17,6 +17,9 @@ const Issues = () => {
   
     useEffect(() => {
       const fetchIssues = async () => {
+        setLoading(true)
+        setError(null)
+        
         const params = {
           minStars: minStars || 0,
           maxStars: maxStars || 100000,
@@ -37,7 +40,7 @@ const Issues = () => {
       };
   
       fetchIssues();
-    }, [])
+    }, [minStars, maxStars, language])
 
   if(loading) return (
     <div className='flex items-center justify-center my-80'>
