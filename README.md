@@ -20,7 +20,7 @@ BugScout is a website that helps developers discover "good first issues" from va
 
 - **User-Friendly Interface:** Simple and intuitive design that allows easy navigation and discovery of issues.
 - **Curated Issues:** Fetches "good first issue" from GitHub, perfect for beginners looking to contribute to open source.
-- **Search and Filter:** Quickly find relevant issues based on repository, language, or keywords.
+- **Search and Filter:** Quickly find relevant issues based on language, or stars
 - **Real-Time Updates:** Stay updated with the latest issues as they are added to GitHub.
 
 
