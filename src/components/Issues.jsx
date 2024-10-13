@@ -102,7 +102,7 @@ const Issues = ({ checked }) => {
   return (
     <div className='my-2'>
         <div>
-            <div className='h-[480px] md:h-[550px] overflow-y-hidden'>
+            <div className='scroll h-[525px] md:h-[650px] overflow-y-auto'>
                 {(checked ?savedData : issues).map(issue => (
                     <div className='bg-[#1c1c1c] hover:bg-[#1e1e1e] border border-[#242424] rounded-xl mb-4 relative hover:shadow-xl transition-shadow ease-in-out duration-200' key={issue.id}>
                         <div className='w-full rounded-t-xl relative'>
