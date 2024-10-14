@@ -1,4 +1,4 @@
-
+> find "good first issues" on github
 
 <div align="center">
 
@@ -10,11 +10,7 @@
 
 # BugScout
 
-BugScout is a website that helps developers discover "good first issues" from various GitHub repositories. It provides an easy-to-use interface to find beginner-friendly issues across open-source projects, making it perfect for those who are new to contributing to open source or looking to get involved in new projects.
-
-<a href="https://bugscout.michahl.com" target="_blank">
-  <img src="https://bugscout.michahl.com/assets/screenshot.png" height="300px">
-</a>
+BugScout is a website that helps developers discover "good first issues" from various GitHub repositories, making it perfect for those who are new to contributing to open source or looking to get involved in new projects.
 
 ## Features
 
