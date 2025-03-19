@@ -1,5 +1,3 @@
-import { Clock, Save, Check } from "lucide-react";
-import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { type Issue } from "@/app/actions";
 import { Bookmark, BookmarkChecked, Calendar, Star, Tag } from "./icons";

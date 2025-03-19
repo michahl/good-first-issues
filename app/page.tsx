@@ -267,7 +267,7 @@ export default function Home() {
                 <div className="divide-y divide-border/30">
                   {savedIssues.length === 0 ? (
                     <div className="py-8 text-center">
-                      <p>You haven't saved any issues yet.</p>
+                      <p>You haven&rsquo;t saved any issues yet.</p>
                       <Button variant="outline" className="mt-4 cursor-pointer" onClick={() => setActiveTab("all")}>
                         Browse Issues
                       </Button>
