@@ -23,7 +23,7 @@ export interface Issue {
     name: string
     color: string
   }[]
-  repository?: Repository
+  repository?: Repository | null
   created_at: string
   updated_at: string
 }
