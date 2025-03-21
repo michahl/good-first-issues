@@ -32,6 +32,18 @@ export const metadata: Metadata = {
     description: "Find beginner-friendly GitHub issues labeled 'good first issue' to contribute to open source projects effortlessly.",
     images: ["https://good-first-issu.vercel.app/assets/screenshot.png"],
   },
+  icons: {
+    icon: [
+      { url: "/assets/favicon/favicon-32x32.png", sizes: "32x32" },
+      { url: "/assets/favicon/favicon-16x16.png", sizes: "16x16" },
+      "/assets/favicon/favicon.ico"
+    ],
+    apple: "/assets/favicon/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/assets/favicon/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "icon", url: "/assets/favicon/android-chrome-512x512.png", sizes: "512x512" }
+    ]
+  },
   robots: "index, follow",
 };
 
