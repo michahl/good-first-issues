@@ -290,7 +290,7 @@ export default function Home() {
         </div>
       </main>
 
-      <Dialog open={showFilters}>
+      <Dialog open={showFilters} onOpenChange={handleOpenChange}>
         <DialogContent className="sm:max-w-[425px] z-50">
           <DialogHeader>
             <DialogTitle>Filter by Repository Stars</DialogTitle>
