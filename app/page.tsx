@@ -20,6 +20,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { fetchIssues, type Issue, type Repository } from "./actions"
 import IssueCard from "@/components/issue-card"
 import { Star } from "@/components/icons"
+import Link from "next/link"
 
 interface SavedIssue extends Issue {
   repository: Repository
@@ -124,18 +125,18 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <header className="border-b border-border/30 py-6">
-        <div className="container mx-auto px-4">
-          <h1 className="text-2xl font-medium text-center">
-            good <span className="font-serif italic">first</span> issue
-          </h1>
+      <header className="border-b border-border/40 py-6">
+        <div className="container flex justify-center mx-auto px-4">
+          <Link className="text-2xl font-medium" href="/">
+            good<span className="font-serif italic text-blue-600">first</span>issue
+          </Link>
         </div>
       </header>
 
       <main className="container mx-auto px-5 md:px-3 py-0 max-w-7xl">
-        <div className="grid grid-cols-1 md:grid-cols-4 md:divide-x md:divide-border/30 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 md:divide-x md:divide-border/40 gap-8">
           {/* Sidebar */}
-          <div className="space-y-8 p-8 md:p-8">
+          <div className="space-y-8 py-4 px-0 sm:px-5">
             <div>
               <h2 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-1">About</h2>
               <p className="text-sm text-muted-foreground">
@@ -289,8 +290,8 @@ export default function Home() {
         </div>
       </main>
 
-      <Dialog open={showFilters} onOpenChange={handleOpenChange}>
-        <DialogContent className="sm:max-w-[425px]">
+      <Dialog open={showFilters}>
+        <DialogContent className="sm:max-w-[425px] z-50">
           <DialogHeader>
             <DialogTitle>Filter by Repository Stars</DialogTitle>
             <DialogDescription>
@@ -306,11 +307,11 @@ export default function Home() {
                 step={1000}
                 value={[tempMinStars, tempMaxStars]}
                 onValueChange={(values) => {
-                  // Ensure we're updating both values correctly
-                  if (values.length === 2) {
-                    setTempMinStars(values[0])
-                    setTempMaxStars(values[1])
-                  }
+              // Ensure we're updating both values correctly
+              if (values.length === 2) {
+                setTempMinStars(values[0])
+                setTempMaxStars(values[1])
+              }
                 }}
                 className="py-4"
               />
@@ -351,13 +352,16 @@ export default function Home() {
             </div>
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setShowFilters(false)}>
+            <Button variant="outline" className="cursor-pointer" onClick={() => setShowFilters(false)}>
               Cancel
             </Button>
-            <Button onClick={applyStarFilters}>Apply Filters</Button>
+            <Button className="cursor-pointer" onClick={applyStarFilters}>Apply Filters</Button>
           </DialogFooter>
         </DialogContent>
       </Dialog>
+      {showFilters && (
+        <div className="fixed inset-0 bg-background/50 backdrop-blur-xs z-40" />
+      )}
     </div>
   )
 }
